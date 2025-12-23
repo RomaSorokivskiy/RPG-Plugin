@@ -1,6 +1,6 @@
 skills:
   warrior_cleave:
-    name: "Cleave"
+    name: "@defs.skills.warrior_cleave.name"
     icon: IRON_AXE
     trigger: RIGHT_CLICK
     cooldownTicks: 80
@@ -57,7 +57,7 @@ skills:
           points: 24
 
   mage_firebolt:
-    name: "Firebolt"
+    name: "@defs.skills.mage_firebolt.name"
     icon: FIRE_CHARGE
     trigger: RIGHT_CLICK
     cooldownTicks: 60
@@ -102,7 +102,7 @@ skills:
           y: 1.0
 
   rogue_dash:
-    name: "Dash"
+    name: "@defs.skills.rogue_dash.name"
     icon: FEATHER
     trigger: Z
     cooldownTicks: 40

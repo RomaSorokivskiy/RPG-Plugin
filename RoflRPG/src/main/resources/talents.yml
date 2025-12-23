@@ -1,9 +1,9 @@
 talents:
   warrior_toughness:
-    name: "Toughness"
+    name: "@defs.talents.warrior_toughness.name"
     icon: SHIELD
     lore:
-      - "+ Max Health"
+      - "@defs.talents.warrior_toughness.lore1"
     addStats:
       max_health: 2
     multipliers: {}
@@ -13,10 +13,10 @@ talents:
     points_per_rank: 1
 
   mage_focus:
-    name: "Focus"
+    name: "@defs.talents.mage_focus.name"
     icon: ENDER_EYE
     lore:
-      - "+ Max Mana"
+      - "@defs.talents.mage_focus.lore1"
     addStats: {}
     multipliers: {}
     resources:
@@ -25,10 +25,10 @@ talents:
     points_per_rank: 1
 
   rogue_agility:
-    name: "Agility"
+    name: "@defs.talents.rogue_agility.name"
     icon: RABBIT_FOOT
     lore:
-      - "+ Speed"
+      - "@defs.talents.rogue_agility.lore1"
     addStats:
       movement_speed: 0.01
     multipliers:

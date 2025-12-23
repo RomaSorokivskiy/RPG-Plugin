@@ -62,3 +62,17 @@ api.registerSkillHandler("myaddon:fire", ctx -> {
 ```
 
 `RoflRPGSkillsAddon` provides `roflskills:effects` as an example handler and `EffectsEngine` as a reference implementation.
+
+## Localization
+
+The core plugin ships with:
+- `plugins/RoflRPG/lang/uk_UA.yaml`
+- `plugins/RoflRPG/lang/en_US.yaml`
+
+In definition files (`classes.yml`, `races.yml`, `skills.yml`, `talents.yml`) you can reference translations by prefixing the value with `@`:
+
+```yaml
+name: "@defs.classes.warrior.name"
+lore:
+  - "@defs.classes.warrior.lore1"
+```

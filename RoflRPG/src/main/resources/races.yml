@@ -1,9 +1,9 @@
 races:
   human:
-    name: "Human"
+    name: "@defs.races.human.name"
     lore:
-      - "Balanced starting race."
-      - "No strengths, no weaknesses."
+      - "@defs.races.human.lore1"
+      - "@defs.races.human.lore2"
     icon: PLAYER_HEAD
     scale: 1.0
     addStats:
@@ -20,10 +20,10 @@ races:
       aura: none
 
   elf:
-    name: "Elf"
+    name: "@defs.races.elf.name"
     lore:
-      - "Light-footed spellcaster."
-      - "+ Mana, + Speed, - Health"
+      - "@defs.races.elf.lore1"
+      - "@defs.races.elf.lore2"
     icon: OAK_SAPLING
     scale: 0.98
     addStats:

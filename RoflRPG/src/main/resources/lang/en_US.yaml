@@ -1,0 +1,83 @@
+prefix: '<gold>[RoflRPG]</gold> '
+
+gui:
+  main:
+    title: RoflRPG
+    race:
+      name: <green>Choose race</green>
+      lore1: <gray>Your look, bonuses and aura.</gray>
+    class:
+      name: <red>Choose class</red>
+      lore1: <gray>Your role, skills and talents.</gray>
+    skills:
+      name: <gold>Skills</gold>
+      lore1: <gray>Cooldowns, hotbar and skill info.</gray>
+    talents:
+      name: <aqua>Talents</aqua>
+      lore1: <gray>Spend talent points.</gray>
+  back:
+    name: <red>Back</red>
+    lore1: <gray>Return to menu</gray>
+  races:
+    title: RoflRPG — Races
+  classes:
+    title: RoflRPG — Classes
+  talents:
+    title: RoflRPG — Talents
+    points: Points
+  skills:
+    title: RoflRPG — Skills
+    trigger: Trigger
+    cooldown: Base CD
+    remaining: Remaining
+    cost: Cost
+    target: Target
+    emptySlot: Empty slot
+    slot: Slot
+    requiredLevel: Required level
+    cooldownLeft: CD now
+    gcd: GCD
+
+hud:
+  actionbar: '<gray>Lvl <white>{level}</white> <dark_gray>|</dark_gray> <gray>{race}</gray> <dark_gray>|</dark_gray> <gray>{class}</gray> <dark_gray>|</dark_gray> <aqua>✦ {mana}/{maxMana}</aqua> <dark_gray>|</dark_gray> <yellow>⚡ {stamina}/{maxStamina}</yellow> {cd}</gray>'
+
+defs:
+  races:
+    human:
+      name: <white>Human</white>
+      lore1: <gray>Balanced starter race.</gray>
+      lore2: <gray>No strengths, no weaknesses.</gray>
+    elf:
+      name: <green>Elf</green>
+      lore1: <gray>Light-footed spellcaster.</gray>
+      lore2: <gray>+Mana, +Speed, -Health.</gray>
+
+  classes:
+    warrior:
+      name: <red>Warrior</red>
+      lore1: <gray>Frontliner with short burst windows.</gray>
+    mage:
+      name: <aqua>Mage</aqua>
+      lore1: <gray>Ranged damage and strong spells.</gray>
+    rogue:
+      name: <yellow>Rogue</yellow>
+      lore1: <gray>Mobility, positioning and dashes.</gray>
+
+  talents:
+    warrior_toughness:
+      name: <green>Toughness</green>
+      lore1: <gray>+Max health.</gray>
+    mage_focus:
+      name: <aqua>Focus</aqua>
+      lore1: <gray>+Max mana.</gray>
+    rogue_agility:
+      name: <yellow>Agility</yellow>
+      lore1: <gray>+Movement speed.</gray>
+
+  skills:
+    warrior_cleave:
+      name: <gold>Cleave</gold>
+    mage_firebolt:
+      name: <red>Firebolt</red>
+    rogue_dash:
+      name: <aqua>Dash</aqua>

@@ -1,10 +1,10 @@
 classes:
   warrior:
-    name: "Warrior"
+    name: "@defs.classes.warrior.name"
     role: "MELEE"
     icon: IRON_SWORD
     lore:
-      - "Frontline fighter with short cooldown bursts."
+      - "@defs.classes.warrior.lore1"
     addStats:
       max_health: 4
       armor: 2
@@ -16,11 +16,11 @@ classes:
       - warrior_toughness
 
   mage:
-    name: "Mage"
+    name: "@defs.classes.mage.name"
     role: "RANGED"
     icon: BLAZE_ROD
     lore:
-      - "Ranged caster with strong burst damage."
+      - "@defs.classes.mage.lore1"
     addStats:
       max_health: -2
     multipliers:
@@ -31,11 +31,11 @@ classes:
       - mage_focus
 
   rogue:
-    name: "Rogue"
+    name: "@defs.classes.rogue.name"
     role: "MOBILITY"
     icon: FEATHER
     lore:
-      - "Fast mobility and repositioning."
+      - "@defs.classes.rogue.lore1"
     addStats:
       movement_speed: 0.03
     multipliers:

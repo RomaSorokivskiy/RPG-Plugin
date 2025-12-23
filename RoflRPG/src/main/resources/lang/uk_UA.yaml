@@ -1,0 +1,85 @@
+prefix: '<gold>[RoflRPG]</gold> '
+
+gui:
+  main:
+    title: RoflRPG
+    race:
+      name: <green>Обрати расу</green>
+      lore1: <gray>Твій вигляд, бонуси та аура.</gray>
+    class:
+      name: <red>Обрати клас</red>
+      lore1: <gray>Твоя роль, скіли та таланти.</gray>
+    skills:
+      name: <gold>Скіли</gold>
+      lore1: <gray>КД, хотбар та опис умінь.</gray>
+    talents:
+      name: <aqua>Таланти</aqua>
+      lore1: <gray>Витрачай очки талантів.</gray>
+  back:
+    name: <red>Назад</red>
+    lore1: <gray>Повернутись у меню</gray>
+  races:
+    title: RoflRPG — Раси
+  classes:
+    title: RoflRPG — Класи
+  talents:
+    title: RoflRPG — Таланти
+    points: Очок
+  skills:
+    title: RoflRPG — Скіли
+    trigger: Тригер
+    cooldown: КД базове
+    remaining: Залишилось
+    cost: Ціна
+    target: Таргет
+    emptySlot: Пустий слот
+    slot: Слот
+    requiredLevel: Потрібен рівень
+    cooldownLeft: КД зараз
+    gcd: GCD
+
+hud:
+  actionbar: '<gray>Lvl <white>{level}</white> <dark_gray>|</dark_gray> <gray>{race}</gray> <dark_gray>|</dark_gray> <gray>{class}</gray> <dark_gray>|</dark_gray> <aqua>✦ {mana}/{maxMana}</aqua> <dark_gray>|</dark_gray> <yellow>⚡ {stamina}/{maxStamina}</yellow> {cd}</gray>'
+
+# Definition-localization keys used by the GitHub template.
+# Use them in YAML definitions as: name: "@defs.classes.warrior.name" etc.
+defs:
+  races:
+    human:
+      name: <white>Людина</white>
+      lore1: <gray>Збалансована стартова раса.</gray>
+      lore2: <gray>Без сильних сторін і слабкостей.</gray>
+    elf:
+      name: <green>Ельф</green>
+      lore1: <gray>Легкий чарівник.</gray>
+      lore2: <gray>+Мана, +Швидкість, -Здоров’я.</gray>
+
+  classes:
+    warrior:
+      name: <red>Воїн</red>
+      lore1: <gray>Фронтлайн з короткими burst-вікнами.</gray>
+    mage:
+      name: <aqua>Маг</aqua>
+      lore1: <gray>Дальній урон і сильні закляття.</gray>
+    rogue:
+      name: <yellow>Розбійник</yellow>
+      lore1: <gray>Мобільність, позиціонування та ривки.</gray>
+
+  talents:
+    warrior_toughness:
+      name: <green>Міць</green>
+      lore1: <gray>+Макс. здоров’я.</gray>
+    mage_focus:
+      name: <aqua>Фокус</aqua>
+      lore1: <gray>+Макс. мана.</gray>
+    rogue_agility:
+      name: <yellow>Спритність</yellow>
+      lore1: <gray>+Швидкість руху.</gray>
+
+  skills:
+    warrior_cleave:
+      name: <gold>Розсічення</gold>
+    mage_firebolt:
+      name: <red>Фаєрболт</red>
+    rogue_dash:
+      name: <aqua>Ривок</aqua>
