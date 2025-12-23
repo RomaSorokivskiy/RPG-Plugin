@@ -1,0 +1,36 @@
+races:
+  human:
+    name: "Human"
+    lore:
+      - "Balanced starting race."
+      - "No strengths, no weaknesses."
+    icon: PLAYER_HEAD
+    scale: 1.0
+    addStats:
+      max_health: 0
+      movement_speed: 0
+      attack_damage: 0
+      armor: 0
+    multipliers:
+      max_health: 1.0
+      movement_speed: 1.0
+      attack_damage: 1.0
+      armor: 1.0
+    cosmetics:
+      aura: none
+
+  elf:
+    name: "Elf"
+    lore:
+      - "Light-footed spellcaster."
+      - "+ Mana, + Speed, - Health"
+    icon: OAK_SAPLING
+    scale: 0.98
+    addStats:
+      max_health: -2
+      movement_speed: 0.02
+    multipliers:
+      max_health: 0.95
+      movement_speed: 1.05
+    cosmetics:
+      aura: mana_spark

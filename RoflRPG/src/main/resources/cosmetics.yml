@@ -1,0 +1,12 @@
+auras:
+  mana_spark:
+    type: AURA
+    particle: ENCHANT
+    size: 1.0
+    periodTicks: 10
+
+  fury_flame:
+    type: AURA
+    particle: FLAME
+    size: 1.2
+    periodTicks: 8

@@ -1,0 +1,37 @@
+talents:
+  warrior_toughness:
+    name: "Toughness"
+    icon: SHIELD
+    lore:
+      - "+ Max Health"
+    addStats:
+      max_health: 2
+    multipliers: {}
+    resources:
+      max_stamina_add: 10
+    max_rank: 5
+    points_per_rank: 1
+
+  mage_focus:
+    name: "Focus"
+    icon: ENDER_EYE
+    lore:
+      - "+ Max Mana"
+    addStats: {}
+    multipliers: {}
+    resources:
+      max_mana_add: 12
+    max_rank: 5
+    points_per_rank: 1
+
+  rogue_agility:
+    name: "Agility"
+    icon: RABBIT_FOOT
+    lore:
+      - "+ Speed"
+    addStats:
+      movement_speed: 0.01
+    multipliers:
+      movement_speed: 1.02
+    max_rank: 3
+    points_per_rank: 1

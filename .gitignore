@@ -1,0 +1,32 @@
+# Maven
+/target/
+**/target/
+
+# IntelliJ IDEA
+/.idea/
+**/.idea/
+*.iml
+*.ipr
+*.iws
+/out/
+
+# VS Code
+/.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Plugin runtime folders (dev servers)
+/run/
+/server/
+/servers/
+/plugins/
+world*/
+
+# Local env
+.env

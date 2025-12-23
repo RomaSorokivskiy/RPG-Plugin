@@ -1,0 +1,29 @@
+ui:
+  prefix: '<gold>[RoflRPG]</gold> '
+resources:
+  enabled: true
+  actionbar: false
+  tickPeriod: 20
+  manaRegenPerTick: 2.0
+  staminaRegenPerTick: 2.5
+xp:
+  baseToNext: 100
+  growth: 1.25
+  talentPointsPerLevel: 1
+scale:
+  enabled: true
+lang:
+  default: uk_UA
+hud:
+  enabled: true
+  actionbar: true
+  periodTicks: 10
+  slots: 9
+  showGcd: true
+skills:
+  enabledTriggers:
+  - Z
+  z:
+    cancelSwap: true
+  rightClick:
+    requireSprint: false

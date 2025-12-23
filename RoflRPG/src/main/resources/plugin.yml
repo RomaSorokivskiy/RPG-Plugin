@@ -1,0 +1,22 @@
+name: RoflRPG
+version: 1.0.1
+main: ua.roma.roflrpg.RoflRPGPlugin
+api-version: "1.21"
+author: Roma
+commands:
+  rpg:
+    description: Open RPG menu
+  race:
+    description: Choose race
+  class:
+    description: Choose class
+  talents:
+    description: Open talents menu
+  skills:
+    description: Open skills menu
+  rpgadmin:
+    description: Admin commands
+    permission: roflrpg.admin
+permissions:
+  roflrpg.admin:
+    default: op

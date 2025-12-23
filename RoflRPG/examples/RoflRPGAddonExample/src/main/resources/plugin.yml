@@ -1,0 +1,5 @@
+name: RoflRPGAddonExample
+version: 1.0.0
+main: com.example.rofladdon.RoflAddonExample
+api-version: "1.21"
+depend: [RoflRPG]

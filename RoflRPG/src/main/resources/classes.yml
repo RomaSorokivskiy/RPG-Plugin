@@ -1,0 +1,46 @@
+classes:
+  warrior:
+    name: "Warrior"
+    role: "MELEE"
+    icon: IRON_SWORD
+    lore:
+      - "Frontline fighter with short cooldown bursts."
+    addStats:
+      max_health: 4
+      armor: 2
+    multipliers:
+      max_health: 1.08
+    skills:
+      - warrior_cleave
+    talents:
+      - warrior_toughness
+
+  mage:
+    name: "Mage"
+    role: "RANGED"
+    icon: BLAZE_ROD
+    lore:
+      - "Ranged caster with strong burst damage."
+    addStats:
+      max_health: -2
+    multipliers:
+      movement_speed: 1.02
+    skills:
+      - mage_firebolt
+    talents:
+      - mage_focus
+
+  rogue:
+    name: "Rogue"
+    role: "MOBILITY"
+    icon: FEATHER
+    lore:
+      - "Fast mobility and repositioning."
+    addStats:
+      movement_speed: 0.03
+    multipliers:
+      movement_speed: 1.05
+    skills:
+      - rogue_dash
+    talents:
+      - rogue_agility

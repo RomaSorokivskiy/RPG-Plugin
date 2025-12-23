@@ -1,0 +1,5 @@
+name: RoflRPGSkillsAddon
+version: 1.0.1
+main: ua.roma.roflrpgskills.RoflRPGSkillsAddonPlugin
+api-version: '1.21'
+depend: [RoflRPG]

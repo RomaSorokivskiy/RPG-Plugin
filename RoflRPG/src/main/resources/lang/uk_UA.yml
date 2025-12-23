@@ -1,0 +1,853 @@
+prefix: '<gold>[RoflRPG]</gold> '
+gui:
+  main:
+    title: RoflRPG
+    race:
+      name: <green>Обрати расу</green>
+      lore1: <gray>Твій вигляд, бонуси і аура.</gray>
+    class:
+      name: <red>Обрати клас</red>
+      lore1: <gray>Твої скіли, роль і таланти.</gray>
+    skills:
+      name: <gold>Скіли</gold>
+      lore1: <gray>Подивитись кд і хотбар.</gray>
+    talents:
+      name: <aqua>Таланти</aqua>
+      lore1: <gray>Трать таланти поінти.</gray>
+  back:
+    name: <red>Назад</red>
+    lore1: <gray>Повернутись у меню</gray>
+  races:
+    title: RoflRPG — Раси
+  classes:
+    title: RoflRPG — Класи
+  talents:
+    title: RoflRPG — Таланти
+    points: Поінтів
+  skills:
+    title: RoflRPG — Скіли
+    trigger: Тригер
+    cooldown: КД базове
+    remaining: Залишилось
+    cost: Ціна
+    target: Таргет
+    emptySlot: Пустий слот
+    slot: Слот
+    requiredLevel: Рівень потрібен
+    cooldownLeft: КД зараз
+    gcd: GCD
+hud:
+  actionbar: '<gray>Lvl <white>{level}</white> <dark_gray>|</dark_gray> <gray>{race}</gray> <dark_gray>|</dark_gray> <gray>{class}</gray> <dark_gray>|</dark_gray> <aqua>✦ {mana}/{maxMana}</aqua> <dark_gray>|</dark_gray> <yellow>⚡ {stamina}/{maxStamina}</yellow> {cd}</gray>'
+race:
+  lviv_cat:
+    name: <gold>Львівський Кіт</gold>
+    lore1: <gray>Відчуває каву за 3 чанки.</gray>
+    lore2: <gray>+трохи швидкості та удачі.</gray>
+  wifi_spirit:
+    name: <aqua>Дух Wi‑Fi</aqua>
+    lore1: <gray>Пінг як стиль життя.</gray>
+    lore2: <gray>Сильніший біля роутера.</gray>
+  paper_skeleton:
+    name: <white>Паперовий Скелет</white>
+    lore1: <gray>Не ламається… майже.</gray>
+    lore2: <gray>Трохи броні, трохи крихкості.</gray>
+  donat_dwarf:
+    name: <yellow>Донатний Гном</yellow>
+    lore1: <gray>Золото — це mindset.</gray>
+    lore2: <gray>Більше HP, менше швидкості.</gray>
+  keyboard_goblin:
+    name: <dark_purple>Клавіатурний Гоблін</dark_purple>
+    lore1: <gray>Клацає швидше за думки.</gray>
+    lore2: <gray>Трохи урону і швидкості.</gray>
+  caffeine_elf:
+    name: <green>Кофеїновий Ельф</green>
+    lore1: <gray>Кава в жилах, світло в очах.</gray>
+    lore2: <gray>Швидше рухається, трохи удачі.</gray>
+defs:
+  races:
+    human:
+      name: <white>Human</white>
+      lore:
+        '1': '<gray>Default mode: just vibes.</gray>'
+    lviv_it:
+      name: <aqua>Lviv IT</aqua>
+      lore:
+        '1': <gray>Powered by caffeine and deadlines.</gray>
+    volyn_bober:
+      name: <green>Volyn Bober</green>
+      lore:
+        '1': <gray>Hard teeth, soft heart. Loves ponds.</gray>
+    discord_goblin:
+      name: <dark_purple>Discord Goblin</dark_purple>
+      lore:
+        '1': <gray>Never sleeps. Never stops pinging.</gray>
+    giga_chad:
+      name: <gold>Giga Chad</gold>
+      lore:
+        '1': <gray>Refuses to take Ls.</gray>
+    crypto_gnome:
+      name: <yellow>Crypto Gnome</yellow>
+      lore:
+        '1': <gray>Buys high, sells low, still confident.</gray>
+    traffic_spirit:
+      name: <red>Traffic Spirit</red>
+      lore:
+        '1': <gray>Always blocks the lane at the worst moment.</gray>
+    lviv_cat:
+      name: '@race.lviv_cat.name'
+      lore:
+        '1': '@race.lviv_cat.lore1'
+        '2': '@race.lviv_cat.lore2'
+    wifi_spirit:
+      name: '@race.wifi_spirit.name'
+      lore:
+        '1': '@race.wifi_spirit.lore1'
+        '2': '@race.wifi_spirit.lore2'
+    paper_skeleton:
+      name: '@race.paper_skeleton.name'
+      lore:
+        '1': '@race.paper_skeleton.lore1'
+        '2': '@race.paper_skeleton.lore2'
+    donat_dwarf:
+      name: '@race.donat_dwarf.name'
+      lore:
+        '1': '@race.donat_dwarf.lore1'
+        '2': '@race.donat_dwarf.lore2'
+    keyboard_goblin:
+      name: '@race.keyboard_goblin.name'
+      lore:
+        '1': '@race.keyboard_goblin.lore1'
+        '2': '@race.keyboard_goblin.lore2'
+    caffeine_elf:
+      name: '@race.caffeine_elf.name'
+      lore:
+        '1': '@race.caffeine_elf.lore1'
+        '2': '@race.caffeine_elf.lore2'
+    patron_dog:
+      name: Пес Патрон
+      lore:
+        '1': Малий, але незламний.
+        '2': Швидко кусає і ще швидше тікає.
+    galya_buh:
+      name: Галя з Бухгалтерії
+      lore:
+        '1': Критує поглядом і штрафує без попередження.
+        '2': Слабкий урон, зате швидко бігає за довідками.
+    kyiv_driver:
+      name: Київський Водій
+      lore:
+        '1': КД? Яке КД, я вже обігнав.
+        '2': Швидкість +, здоров’я -.
+    varenyk:
+      name: Вареник
+      lore:
+        '1': Теплий, пухкий і важко зупиняється.
+        '2': Трохи повільний, але живучий.
+    it_senior:
+      name: IT Senior
+      lore:
+        '1': +ДПС від сухих PR-ів.
+        '2': +Стійкість від дедлайнів.
+    rofl_tank:
+      name: Рофло-Танк
+      lore:
+        '1': Товстий як стіна, б’є як подушка.
+        '2': Ідеально для тих, хто любить жити довго.
+    molfar:
+      name: Мольфар
+      lore:
+        '1': Шепче бафи і забирає дебафи.
+        '2': Трохи урону, трохи швидкості.
+    pirate:
+      name: Пірат
+      lore:
+        '1': Знає де лут і де вихід.
+        '2': Середній урон і мобільність.
+  classes:
+    guest:
+      name: <gray>AFK Гість</gray>
+      lore:
+        '1': <gray>AFK by profession.</gray>
+        '2': <gray>Low impact, high peace.</gray>
+    dev_freak:
+      name: <gold>Ігровий Дев Фрік</gold>
+      lore:
+        '1': <gray>Commits first, thinks later.</gray>
+        '2': <gray>Gets stronger at 3AM.</gray>
+    bmw_boy:
+      name: <gold>БМВ Бой</gold>
+      lore:
+        '1': <gray>Drifts into trouble.</gray>
+        '2': <gray>Horn is a weapon.</gray>
+    hospital_man:
+      name: <gold>Лікарня-Мен</gold>
+      lore:
+        '1': <gray>Heals allies, scares enemies.</gray>
+        '2': <gray>Always has a syringe.</gray>
+    antimag_mid:
+      name: <gold>Антімаг Мід</gold>
+      lore:
+        '1': <gray>Hates magic. Uses it anyway.</gray>
+        '2': <gray>Mid or feed.</gray>
+    shaybtron:
+      name: <gold>Шайбтрон</gold>
+      lore:
+        '1': <gray>Half robot, half puck.</gray>
+        '2': <gray>Full check.</gray>
+    egg_lover:
+      name: <gold>Яєчко-лавер</gold>
+      lore:
+        '1': <gray>Eggs are not a phase.</gray>
+        '2': <gray>Shell provides protection.</gray>
+    gacha_woman:
+      name: <gold>Гачча-Вумен</gold>
+      lore:
+        '1': <gray>Rolls for crits. Always.</gray>
+        '2': <gray>Luck is a strategy.</gray>
+    furor:
+      name: <gold>Фурор</gold>
+      lore:
+        '1': <gray>Creates pure hype and chaos.</gray>
+        '2': <gray>Not a leader. Just a loud one.</gray>
+    passatik:
+      name: <gold>Пассатік</gold>
+      lore:
+        '1': <gray>Tanky wagon energy.</gray>
+        '2': <gray>Family pack included.</gray>
+    unix_crush:
+      name: <gold>UNIX Краш</gold>
+      lore:
+        '1': <gray>Types fast. Breaks faster.</gray>
+        '2': <gray>Sudo makes it legal.</gray>
+    volynsky_rozlyv:
+      name: <gold>Волинський розлив</gold>
+      lore:
+        '1': <gray>Buffs himself. Debuffs everyone.</gray>
+        '2': <gray>Taste-tested on friends.</gray>
+    micra_hatch:
+      name: <gold>Мікра-хетчбек</gold>
+      lore:
+        '1': <gray>Small hitbox, big ego.</gray>
+        '2': <gray>Parking specialist.</gray>
+  skills:
+    dev_coffee_commit:
+      name: <aqua>Coffee Commit</aqua>
+    dev_git_blame:
+      name: <red>Git Blame</red>
+    dev_hotfix_dash:
+      name: <yellow>Hotfix Dash</yellow>
+    dev_refactor_smash:
+      name: <dark_red>Refactor Smash</dark_red>
+    bmw_drift:
+      name: <green>Drift</green>
+    bmw_road_rage:
+      name: <red>Road Rage</red>
+    bmw_turbo_charge:
+      name: <yellow>Turbo Charge</yellow>
+    bmw_honk:
+      name: <white>Honk!</white>
+    hosp_first_aid_ray:
+      name: <green>First Aid</green>
+    hosp_vitamin_shot:
+      name: <aqua>Vitamin Shot</aqua>
+    hosp_quick_step:
+      name: <yellow>Quick Step</yellow>
+    hosp_defibrillator:
+      name: <red>Defibrillator</red>
+    am_blink:
+      name: <aqua>Blink</aqua>
+    am_mana_break:
+      name: <red>Mana Break</red>
+    am_spell_shield:
+      name: <yellow>Spell Shield</yellow>
+    am_mana_void:
+      name: <dark_purple>Mana Void</dark_purple>
+    shay_puck_shot:
+      name: <white>Puck Shot</white>
+    shay_ice_sweep:
+      name: <aqua>Ice Sweep</aqua>
+    shay_powerplay:
+      name: <yellow>Power Play</yellow>
+    shay_bodycheck:
+      name: <red>Bodycheck</red>
+    egg_throw:
+      name: <yellow>Egg Throw</yellow>
+    egg_omelette_bomb:
+      name: <gold>Omelette Bomb</gold>
+    egg_sneaky_dash:
+      name: <green>Runny Yolk Dash</green>
+    egg_shell_guard:
+      name: <gray>Shell Guard</gray>
+    gacha_lucky_charm:
+      name: <gold>Lucky Charm</gold>
+    gacha_pull:
+      name: <aqua>Pull</aqua>
+    gacha_coupon_dash:
+      name: <green>Coupon Dash</green>
+    gacha_rng_blast:
+      name: <light_purple>RNG Blast</light_purple>
+    furor_speech:
+      name: <yellow>Hype Speech</yellow>
+    furor_stampede:
+      name: <red>Stampede</red>
+    furor_boom:
+      name: <gold>Mic Drop</gold>
+    furor_riot:
+      name: <dark_red>Riot</dark_red>
+    passat_family_shield:
+      name: <green>Family Shield</green>
+    passat_wagon_slam:
+      name: <red>Wagon Slam</red>
+    passat_cruise:
+      name: <yellow>Cruise Control</yellow>
+    passat_bumper:
+      name: <dark_red>Bumper Hit</dark_red>
+    unix_sudo_slap:
+      name: <red>Sudo Slap</red>
+    unix_grep_beam:
+      name: <aqua>Grep Beam</aqua>
+    unix_pipe_dash:
+      name: <green>Pipe Dash</green>
+    unix_kernel_panic:
+      name: <dark_purple>Kernel Panic</dark_purple>
+    volyn_taste_test:
+      name: <gold>Taste Test</gold>
+    volyn_moonshine:
+      name: <yellow>Moonshine</yellow>
+    volyn_ward:
+      name: <aqua>Ward</aqua>
+    volyn_bottle_throw:
+      name: <red>Bottle Throw</red>
+    micra_zip:
+      name: <green>Zip</green>
+    micra_smoke_screen:
+      name: <gray>Smoke Screen</gray>
+    micra_hatch_dash:
+      name: <yellow>Hatch Dash</yellow>
+    micra_parking_hit:
+      name: <red>Parking Hit</red>
+    guest_sit:
+      name: <gray>Sit AFK</gray>
+    guest_wave:
+      name: <gray>Wave</gray>
+  talents:
+    dev_freak_heart:
+      name: <white>Ігровий Дев Фрік</white> <gray>• Серце</gray>
+      lore:
+        '1': <gray>+2 Max HP.</gray>
+    dev_freak_boots:
+      name: <white>Ігровий Дев Фрік</white> <gray>• Ноги</gray>
+      lore:
+        '1': <gray>+2% move speed.</gray>
+    dev_freak_hands:
+      name: <white>Ігровий Дев Фрік</white> <gray>• Руки</gray>
+      lore:
+        '1': <gray>+2% attack damage.</gray>
+    dev_freak_armor:
+      name: <white>Ігровий Дев Фрік</white> <gray>• Броня</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    dev_freak_mana:
+      name: <white>Ігровий Дев Фрік</white> <gray>• Мана</gray>
+      lore:
+        '1': <gray>+25 max mana.</gray>
+    dev_freak_stam:
+      name: <white>Ігровий Дев Фрік</white> <gray>• Стаміна</gray>
+      lore:
+        '1': <gray>+25 max stamina.</gray>
+    dev_freak_night_build:
+      name: <gold>Ігровий Дев Фрік</gold> <gray>• Night Build</gray>
+      lore:
+        '1': <gray>+3% dmg at night vibes.</gray>
+    dev_freak_debug_aura:
+      name: <gold>Ігровий Дев Фрік</gold> <gray>• Debug Aura</gray>
+      lore:
+        '1': <gray>+1 Luck, +1% speed.</gray>
+    dev_freak_no_sleep:
+      name: <gold>Ігровий Дев Фрік</gold> <gray>• No Sleep</gray>
+      lore:
+        '1': <gray>+5% dmg, -1 HP.</gray>
+    dev_freak_stack_overflow:
+      name: <gold>Ігровий Дев Фрік</gold> <gray>• Stack Overflow</gray>
+      lore:
+        '1': <gray>+2% speed (tabs x200).</gray>
+    bmw_boy_heart:
+      name: <white>БМВ Бой</white> <gray>• Серце</gray>
+      lore:
+        '1': <gray>+2 Max HP.</gray>
+    bmw_boy_boots:
+      name: <white>БМВ Бой</white> <gray>• Ноги</gray>
+      lore:
+        '1': <gray>+2% move speed.</gray>
+    bmw_boy_hands:
+      name: <white>БМВ Бой</white> <gray>• Руки</gray>
+      lore:
+        '1': <gray>+2% attack damage.</gray>
+    bmw_boy_armor:
+      name: <white>БМВ Бой</white> <gray>• Броня</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    bmw_boy_mana:
+      name: <white>БМВ Бой</white> <gray>• Мана</gray>
+      lore:
+        '1': <gray>+25 max mana.</gray>
+    bmw_boy_stam:
+      name: <white>БМВ Бой</white> <gray>• Стаміна</gray>
+      lore:
+        '1': <gray>+25 max stamina.</gray>
+    bmw_boy_premium_fuel:
+      name: <gold>БМВ Бой</gold> <gray>• Premium Fuel</gray>
+      lore:
+        '1': <gray>+3% speed.</gray>
+    bmw_boy_loud_exhaust:
+      name: <gold>БМВ Бой</gold> <gray>• Loud Exhaust</gray>
+      lore:
+        '1': <gray>+4% dmg.</gray>
+    bmw_boy_drift_king:
+      name: <gold>БМВ Бой</gold> <gray>• Drift King</gray>
+      lore:
+        '1': <gray>+2% speed, +2% dmg.</gray>
+    bmw_boy_parking_ticket:
+      name: <gold>БМВ Бой</gold> <gray>• Parking Ticket</gray>
+      lore:
+        '1': <gray>+1 armor, -1% speed.</gray>
+    hospital_man_heart:
+      name: <white>Лікарня-Мен</white> <gray>• Серце</gray>
+      lore:
+        '1': <gray>+2 Max HP.</gray>
+    hospital_man_boots:
+      name: <white>Лікарня-Мен</white> <gray>• Ноги</gray>
+      lore:
+        '1': <gray>+2% move speed.</gray>
+    hospital_man_hands:
+      name: <white>Лікарня-Мен</white> <gray>• Руки</gray>
+      lore:
+        '1': <gray>+2% attack damage.</gray>
+    hospital_man_armor:
+      name: <white>Лікарня-Мен</white> <gray>• Броня</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    hospital_man_mana:
+      name: <white>Лікарня-Мен</white> <gray>• Мана</gray>
+      lore:
+        '1': <gray>+25 max mana.</gray>
+    hospital_man_stam:
+      name: <white>Лікарня-Мен</white> <gray>• Стаміна</gray>
+      lore:
+        '1': <gray>+25 max stamina.</gray>
+    hospital_man_better_bandages:
+      name: <gold>Лікарня-Мен</gold> <gray>• Better Bandages</gray>
+      lore:
+        '1': <gray>+1 HP.</gray>
+    hospital_man_sterile_hands:
+      name: <gold>Лікарня-Мен</gold> <gray>• Sterile Hands</gray>
+      lore:
+        '1': <gray>+2% speed, -1% dmg.</gray>
+    hospital_man_doctor_order:
+      name: <gold>Лікарня-Мен</gold> <gray>• Doctor Order</gray>
+      lore:
+        '1': <gray>+2% dmg (authority).</gray>
+    hospital_man_triage:
+      name: <gold>Лікарня-Мен</gold> <gray>• Triage</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    antimag_mid_heart:
+      name: <white>Антімаг Мід</white> <gray>• Серце</gray>
+      lore:
+        '1': <gray>+2 Max HP.</gray>
+    antimag_mid_boots:
+      name: <white>Антімаг Мід</white> <gray>• Ноги</gray>
+      lore:
+        '1': <gray>+2% move speed.</gray>
+    antimag_mid_hands:
+      name: <white>Антімаг Мід</white> <gray>• Руки</gray>
+      lore:
+        '1': <gray>+2% attack damage.</gray>
+    antimag_mid_armor:
+      name: <white>Антімаг Мід</white> <gray>• Броня</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    antimag_mid_mana:
+      name: <white>Антімаг Мід</white> <gray>• Мана</gray>
+      lore:
+        '1': <gray>+25 max mana.</gray>
+    antimag_mid_stam:
+      name: <white>Антімаг Мід</white> <gray>• Стаміна</gray>
+      lore:
+        '1': <gray>+25 max stamina.</gray>
+    antimag_mid_blink_training:
+      name: <gold>Антімаг Мід</gold> <gray>• Blink Training</gray>
+      lore:
+        '1': <gray>+3% speed.</gray>
+    antimag_mid_mana_hate:
+      name: <gold>Антімаг Мід</gold> <gray>• Mana Hate</gray>
+      lore:
+        '1': <gray>+5% dmg.</gray>
+    antimag_mid_spell_paranoia:
+      name: <gold>Антімаг Мід</gold> <gray>• Spell Paranoia</gray>
+      lore:
+        '1': <gray>+2 HP.</gray>
+    antimag_mid_mid_focus:
+      name: <gold>Антімаг Мід</gold> <gray>• Mid Focus</gray>
+      lore:
+        '1': <gray>+2% dmg, +2% speed.</gray>
+    shaybtron_heart:
+      name: <white>Шайбтрон</white> <gray>• Серце</gray>
+      lore:
+        '1': <gray>+2 Max HP.</gray>
+    shaybtron_boots:
+      name: <white>Шайбтрон</white> <gray>• Ноги</gray>
+      lore:
+        '1': <gray>+2% move speed.</gray>
+    shaybtron_hands:
+      name: <white>Шайбтрон</white> <gray>• Руки</gray>
+      lore:
+        '1': <gray>+2% attack damage.</gray>
+    shaybtron_armor:
+      name: <white>Шайбтрон</white> <gray>• Броня</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    shaybtron_mana:
+      name: <white>Шайбтрон</white> <gray>• Мана</gray>
+      lore:
+        '1': <gray>+25 max mana.</gray>
+    shaybtron_stam:
+      name: <white>Шайбтрон</white> <gray>• Стаміна</gray>
+      lore:
+        '1': <gray>+25 max stamina.</gray>
+    shaybtron_steel_plating:
+      name: <gold>Шайбтрон</gold> <gray>• Steel Plating</gray>
+      lore:
+        '1': <gray>+2 armor.</gray>
+    shaybtron_puck_control:
+      name: <gold>Шайбтрон</gold> <gray>• Puck Control</gray>
+      lore:
+        '1': <gray>+3% dmg.</gray>
+    shaybtron_turbo_skates:
+      name: <gold>Шайбтрон</gold> <gray>• Turbo Skates</gray>
+      lore:
+        '1': <gray>+2% speed.</gray>
+    shaybtron_powerplay_brain:
+      name: <gold>Шайбтрон</gold> <gray>• Powerplay Brain</gray>
+      lore:
+        '1': <gray>+1 Luck.</gray>
+    egg_lover_heart:
+      name: <white>Яєчко-лавер</white> <gray>• Серце</gray>
+      lore:
+        '1': <gray>+2 Max HP.</gray>
+    egg_lover_boots:
+      name: <white>Яєчко-лавер</white> <gray>• Ноги</gray>
+      lore:
+        '1': <gray>+2% move speed.</gray>
+    egg_lover_hands:
+      name: <white>Яєчко-лавер</white> <gray>• Руки</gray>
+      lore:
+        '1': <gray>+2% attack damage.</gray>
+    egg_lover_armor:
+      name: <white>Яєчко-лавер</white> <gray>• Броня</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    egg_lover_mana:
+      name: <white>Яєчко-лавер</white> <gray>• Мана</gray>
+      lore:
+        '1': <gray>+25 max mana.</gray>
+    egg_lover_stam:
+      name: <white>Яєчко-лавер</white> <gray>• Стаміна</gray>
+      lore:
+        '1': <gray>+25 max stamina.</gray>
+    egg_lover_fresh_eggs:
+      name: <gold>Яєчко-лавер</gold> <gray>• Fresh Eggs</gray>
+      lore:
+        '1': <gray>+1 HP.</gray>
+    egg_lover_hard_shell:
+      name: <gold>Яєчко-лавер</gold> <gray>• Hard Shell</gray>
+      lore:
+        '1': <gray>+2 armor.</gray>
+    egg_lover_runny_yolk:
+      name: <gold>Яєчко-лавер</gold> <gray>• Runny Yolk</gray>
+      lore:
+        '1': <gray>+2% speed.</gray>
+    egg_lover_protein:
+      name: <gold>Яєчко-лавер</gold> <gray>• Protein</gray>
+      lore:
+        '1': <gray>+3% dmg.</gray>
+    gacha_woman_heart:
+      name: <white>Гачча-Вумен</white> <gray>• Серце</gray>
+      lore:
+        '1': <gray>+2 Max HP.</gray>
+    gacha_woman_boots:
+      name: <white>Гачча-Вумен</white> <gray>• Ноги</gray>
+      lore:
+        '1': <gray>+2% move speed.</gray>
+    gacha_woman_hands:
+      name: <white>Гачча-Вумен</white> <gray>• Руки</gray>
+      lore:
+        '1': <gray>+2% attack damage.</gray>
+    gacha_woman_armor:
+      name: <white>Гачча-Вумен</white> <gray>• Броня</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    gacha_woman_mana:
+      name: <white>Гачча-Вумен</white> <gray>• Мана</gray>
+      lore:
+        '1': <gray>+25 max mana.</gray>
+    gacha_woman_stam:
+      name: <white>Гачча-Вумен</white> <gray>• Стаміна</gray>
+      lore:
+        '1': <gray>+25 max stamina.</gray>
+    gacha_woman_pity_system:
+      name: <gold>Гачча-Вумен</gold> <gray>• Pity System</gray>
+      lore:
+        '1': <gray>+2 Luck.</gray>
+    gacha_woman_banner_rateup:
+      name: <gold>Гачча-Вумен</gold> <gray>• Banner Rateup</gray>
+      lore:
+        '1': <gray>+4% dmg.</gray>
+    gacha_woman_daily_login:
+      name: <gold>Гачча-Вумен</gold> <gray>• Daily Login</gray>
+      lore:
+        '1': <gray>+2% speed.</gray>
+    gacha_woman_salt_mine:
+      name: <gold>Гачча-Вумен</gold> <gray>• Salt Mine</gray>
+      lore:
+        '1': <gray>+2 HP, -1% speed.</gray>
+    furor_heart:
+      name: <white>Фурор</white> <gray>• Серце</gray>
+      lore:
+        '1': <gray>+2 Max HP.</gray>
+    furor_boots:
+      name: <white>Фурор</white> <gray>• Ноги</gray>
+      lore:
+        '1': <gray>+2% move speed.</gray>
+    furor_hands:
+      name: <white>Фурор</white> <gray>• Руки</gray>
+      lore:
+        '1': <gray>+2% attack damage.</gray>
+    furor_armor:
+      name: <white>Фурор</white> <gray>• Броня</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    furor_mana:
+      name: <white>Фурор</white> <gray>• Мана</gray>
+      lore:
+        '1': <gray>+25 max mana.</gray>
+    furor_stam:
+      name: <white>Фурор</white> <gray>• Стаміна</gray>
+      lore:
+        '1': <gray>+25 max stamina.</gray>
+    furor_hype_machine:
+      name: <gold>Фурор</gold> <gray>• Hype Machine</gray>
+      lore:
+        '1': <gray>+3% dmg.</gray>
+    furor_riot_shield:
+      name: <gold>Фурор</gold> <gray>• Riot Shield</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    furor_stage_presence:
+      name: <gold>Фурор</gold> <gray>• Stage Presence</gray>
+      lore:
+        '1': <gray>+1 Luck, +1% speed.</gray>
+    furor_adrenaline:
+      name: <gold>Фурор</gold> <gray>• Adrenaline</gray>
+      lore:
+        '1': <gray>+1 HP, +2% dmg.</gray>
+    passatik_heart:
+      name: <white>Пассатік</white> <gray>• Серце</gray>
+      lore:
+        '1': <gray>+2 Max HP.</gray>
+    passatik_boots:
+      name: <white>Пассатік</white> <gray>• Ноги</gray>
+      lore:
+        '1': <gray>+2% move speed.</gray>
+    passatik_hands:
+      name: <white>Пассатік</white> <gray>• Руки</gray>
+      lore:
+        '1': <gray>+2% attack damage.</gray>
+    passatik_armor:
+      name: <white>Пассатік</white> <gray>• Броня</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    passatik_mana:
+      name: <white>Пассатік</white> <gray>• Мана</gray>
+      lore:
+        '1': <gray>+25 max mana.</gray>
+    passatik_stam:
+      name: <white>Пассатік</white> <gray>• Стаміна</gray>
+      lore:
+        '1': <gray>+25 max stamina.</gray>
+    passatik_family_pack:
+      name: <gold>Пассатік</gold> <gray>• Family Pack</gray>
+      lore:
+        '1': <gray>+3 HP.</gray>
+    passatik_winter_tires:
+      name: <gold>Пассатік</gold> <gray>• Winter Tires</gray>
+      lore:
+        '1': <gray>+1 armor, +1% speed.</gray>
+    passatik_diesel_torque:
+      name: <gold>Пассатік</gold> <gray>• Diesel Torque</gray>
+      lore:
+        '1': <gray>+3% dmg.</gray>
+    passatik_roof_box:
+      name: <gold>Пассатік</gold> <gray>• Roof Box</gray>
+      lore:
+        '1': <gray>Style points only. (no stats)</gray>
+    unix_crush_heart:
+      name: <white>UNIX Краш</white> <gray>• Серце</gray>
+      lore:
+        '1': <gray>+2 Max HP.</gray>
+    unix_crush_boots:
+      name: <white>UNIX Краш</white> <gray>• Ноги</gray>
+      lore:
+        '1': <gray>+2% move speed.</gray>
+    unix_crush_hands:
+      name: <white>UNIX Краш</white> <gray>• Руки</gray>
+      lore:
+        '1': <gray>+2% attack damage.</gray>
+    unix_crush_armor:
+      name: <white>UNIX Краш</white> <gray>• Броня</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    unix_crush_mana:
+      name: <white>UNIX Краш</white> <gray>• Мана</gray>
+      lore:
+        '1': <gray>+25 max mana.</gray>
+    unix_crush_stam:
+      name: <white>UNIX Краш</white> <gray>• Стаміна</gray>
+      lore:
+        '1': <gray>+25 max stamina.</gray>
+    unix_crush_sudo_power:
+      name: <gold>UNIX Краш</gold> <gray>• Sudo Power</gray>
+      lore:
+        '1': <gray>+4% dmg.</gray>
+    unix_crush_dotfiles:
+      name: <gold>UNIX Краш</gold> <gray>• Dotfiles</gray>
+      lore:
+        '1': <gray>+1 Luck.</gray>
+    unix_crush_terminal_speed:
+      name: <gold>UNIX Краш</gold> <gray>• Terminal Speed</gray>
+      lore:
+        '1': <gray>+2% speed.</gray>
+    unix_crush_kernel_harden:
+      name: <gold>UNIX Краш</gold> <gray>• Kernel Harden</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    volynsky_rozlyv_heart:
+      name: <white>Волинський розлив</white> <gray>• Серце</gray>
+      lore:
+        '1': <gray>+2 Max HP.</gray>
+    volynsky_rozlyv_boots:
+      name: <white>Волинський розлив</white> <gray>• Ноги</gray>
+      lore:
+        '1': <gray>+2% move speed.</gray>
+    volynsky_rozlyv_hands:
+      name: <white>Волинський розлив</white> <gray>• Руки</gray>
+      lore:
+        '1': <gray>+2% attack damage.</gray>
+    volynsky_rozlyv_armor:
+      name: <white>Волинський розлив</white> <gray>• Броня</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    volynsky_rozlyv_mana:
+      name: <white>Волинський розлив</white> <gray>• Мана</gray>
+      lore:
+        '1': <gray>+25 max mana.</gray>
+    volynsky_rozlyv_stam:
+      name: <white>Волинський розлив</white> <gray>• Стаміна</gray>
+      lore:
+        '1': <gray>+25 max stamina.</gray>
+    volynsky_rozlyv_strong_batch:
+      name: <gold>Волинський розлив</gold> <gray>• Strong Batch</gray>
+      lore:
+        '1': <gray>+3% dmg.</gray>
+    volynsky_rozlyv_thick_glass:
+      name: <gold>Волинський розлив</gold> <gray>• Thick Glass</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    volynsky_rozlyv_taster:
+      name: <gold>Волинський розлив</gold> <gray>• Taster</gray>
+      lore:
+        '1': <gray>+1 Luck.</gray>
+    volynsky_rozlyv_hangover:
+      name: <gold>Волинський розлив</gold> <gray>• Hangover</gray>
+      lore:
+        '1': <gray>+2 HP, -2% speed.</gray>
+    micra_hatch_heart:
+      name: <white>Мікра-хетчбек</white> <gray>• Серце</gray>
+      lore:
+        '1': <gray>+2 Max HP.</gray>
+    micra_hatch_boots:
+      name: <white>Мікра-хетчбек</white> <gray>• Ноги</gray>
+      lore:
+        '1': <gray>+2% move speed.</gray>
+    micra_hatch_hands:
+      name: <white>Мікра-хетчбек</white> <gray>• Руки</gray>
+      lore:
+        '1': <gray>+2% attack damage.</gray>
+    micra_hatch_armor:
+      name: <white>Мікра-хетчбек</white> <gray>• Броня</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    micra_hatch_mana:
+      name: <white>Мікра-хетчбек</white> <gray>• Мана</gray>
+      lore:
+        '1': <gray>+25 max mana.</gray>
+    micra_hatch_stam:
+      name: <white>Мікра-хетчбек</white> <gray>• Стаміна</gray>
+      lore:
+        '1': <gray>+25 max stamina.</gray>
+    micra_hatch_tiny_hitbox:
+      name: <gold>Мікра-хетчбек</gold> <gray>• Tiny Hitbox</gray>
+      lore:
+        '1': <gray>+3% speed.</gray>
+    micra_hatch_street_smart:
+      name: <gold>Мікра-хетчбек</gold> <gray>• Street Smart</gray>
+      lore:
+        '1': <gray>+1 Luck.</gray>
+    micra_hatch_lightweight:
+      name: <gold>Мікра-хетчбек</gold> <gray>• Lightweight</gray>
+      lore:
+        '1': <gray>+2% speed, +1% dmg.</gray>
+    micra_hatch_fragile_bumper:
+      name: <gold>Мікра-хетчбек</gold> <gray>• Fragile Bumper</gray>
+      lore:
+        '1': <gray>+4% speed, -1 HP.</gray>
+    guest_heart:
+      name: <white>AFK Гість</white> <gray>• Серце</gray>
+      lore:
+        '1': <gray>+2 Max HP.</gray>
+    guest_boots:
+      name: <white>AFK Гість</white> <gray>• Ноги</gray>
+      lore:
+        '1': <gray>+2% move speed.</gray>
+    guest_hands:
+      name: <white>AFK Гість</white> <gray>• Руки</gray>
+      lore:
+        '1': <gray>+2% attack damage.</gray>
+    guest_armor:
+      name: <white>AFK Гість</white> <gray>• Броня</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    guest_mana:
+      name: <white>AFK Гість</white> <gray>• Мана</gray>
+      lore:
+        '1': <gray>+25 max mana.</gray>
+    guest_stam:
+      name: <white>AFK Гість</white> <gray>• Стаміна</gray>
+      lore:
+        '1': <gray>+25 max stamina.</gray>
+    guest_afk_mode:
+      name: <gold>AFK Гість</gold> <gray>• Afk Mode</gray>
+      lore:
+        '1': <gray>+1 HP.</gray>
+    guest_no_drama:
+      name: <gold>AFK Гість</gold> <gray>• No Drama</gray>
+      lore:
+        '1': <gray>Style points only.</gray>
+    guest_peaceful:
+      name: <gold>AFK Гість</gold> <gray>• Peaceful</gray>
+      lore:
+        '1': <gray>+1 armor.</gray>
+    guest_chill_vibes:
+      name: <gold>AFK Гість</gold> <gray>• Chill Vibes</gray>
+      lore:
+        '1': <gray>+1% speed.</gray>

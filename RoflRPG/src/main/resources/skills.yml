@@ -1,0 +1,139 @@
+skills:
+  warrior_cleave:
+    name: "Cleave"
+    icon: IRON_AXE
+    trigger: RIGHT_CLICK
+    cooldownTicks: 80
+    gcdTicks: 10
+    requiredLevel: 1
+    handler: roflskills:effects
+    cost:
+      type: STAMINA
+      amount: 15
+    target:
+      type: CONE
+      range: 4.0
+    effects:
+      - type: DAMAGE
+        amount: 4.0
+      - type: KNOCKBACK
+        strength: 0.7
+    data:
+      # Cinematics timeline: cast / impact / expire phases.
+      timeline:
+        - phase: cast
+          at: 0
+          type: SOUND
+          target: CASTER
+          sound: ENTITY_PLAYER_ATTACK_SWEEP
+          volume: 0.9
+          pitch: 1.2
+        - phase: cast
+          at: 0
+          type: SPIRAL
+          target: CASTER
+          particle: CRIT
+          radius: 1.2
+          height: 2.0
+          turns: 2
+          points: 56
+        - phase: impact
+          at: 1
+          type: RING
+          target: CASTER
+          particle: SWEEP_ATTACK
+          radius: 3.0
+          points: 32
+          y: 1.0
+        - phase: expire
+          at: 10
+          type: PULSE
+          target: CASTER
+          particle: CLOUD
+          startRadius: 0.8
+          endRadius: 2.2
+          pulses: 2
+          everyTicks: 5
+          points: 24
+
+  mage_firebolt:
+    name: "Firebolt"
+    icon: FIRE_CHARGE
+    trigger: RIGHT_CLICK
+    cooldownTicks: 60
+    gcdTicks: 10
+    requiredLevel: 1
+    handler: roflskills:effects
+    cost:
+      type: MANA
+      amount: 20
+    target:
+      type: RAY
+      range: 25.0
+    effects:
+      - type: DAMAGE
+        amount: 6.0
+      - type: POTION
+        effect: SLOWNESS
+        durationTicks: 40
+        amplifier: 0
+    data:
+      timeline:
+        - phase: cast
+          at: 0
+          type: SOUND
+          target: CASTER
+          sound: ENTITY_BLAZE_SHOOT
+          volume: 0.8
+          pitch: 1.3
+        - phase: impact
+          at: 1
+          type: BEAM
+          target: TARGET
+          particle: FLAME
+          points: 28
+        - phase: impact
+          at: 1
+          type: RING
+          target: TARGET
+          particle: LAVA
+          radius: 2.0
+          points: 20
+          y: 1.0
+
+  rogue_dash:
+    name: "Dash"
+    icon: FEATHER
+    trigger: Z
+    cooldownTicks: 40
+    gcdTicks: 6
+    requiredLevel: 1
+    handler: roflskills:effects
+    cost:
+      type: STAMINA
+      amount: 10
+    target:
+      type: SELF
+      range: 0
+    effects:
+      - type: DASH
+        strength: 1.2
+    data:
+      timeline:
+        - phase: cast
+          at: 0
+          type: SOUND
+          target: CASTER
+          sound: ENTITY_ENDERMAN_TELEPORT
+          volume: 0.6
+          pitch: 1.6
+        - phase: cast
+          at: 0
+          type: PULSE
+          target: CASTER
+          particle: CLOUD
+          startRadius: 0.6
+          endRadius: 1.8
+          pulses: 2
+          everyTicks: 3
+          points: 18
